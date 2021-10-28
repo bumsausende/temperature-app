@@ -30,11 +30,11 @@ export const Convert = ({ from }) => {
     <>
       <form
         style={{ display: 'flex', alignItems: 'center', gap: 16 }}
-        onSubmit={handleSubmit}
+        onSubmit={handleSubmit} data-testform="formSubmit"
       >
         <label>
           <span>{units[from].name}: </span>
-          <input type="number" name="input" />
+          <input type="number" name="input" data-test="form-input"/>
           <span>{units[from].unit}</span>
         </label>
         <input type="submit" value="Calculate ✨" />
